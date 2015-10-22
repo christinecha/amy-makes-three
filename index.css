@@ -1,0 +1,71 @@
+*, body, h1, h2, h3, h4, h5 { margin: 0 0 0 0; }
+body { background-color: black; }
+h1 { font-family: 'Six Caps', serif; font-size: 80px; font-weight: normal; }
+h2 { font-family: 'Roboto', serif; font-size: 18px; margin-bottom: 5px; }
+p { font-family: 'Roboto', sans-serif; font-size: 12px; text-transform: uppercase; font-weight: 300; }
+
+.menu { z-index: 200; position: absolute; top: 20px; right: 30px; color: white; }
+.menu h1 { cursor: pointer; font-size: 30px; letter-spacing: .05em; }
+.menu a { font-family: 'Six Caps', serif; font-size: 30px; font-weight: normal; letter-spacing: .05em; cursor: pointer; }
+.menu a:hover { text-shadow: 2px 2px 2px #ff0000; }
+.menu-expanded {
+  display: none;
+  position: fixed;
+  text-align: right;
+  padding: 30px;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(0,0,0,.6);
+  width: 30%;
+  z-index: 300;
+}
+.menu-close { font-family: 'Roboto', sans-serif; font-size: 30px; float: right; cursor: pointer; }
+.menu-close:hover { text-shadow: 2px 2px 2px #ff0000; }
+
+.strip {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.bx-wrapper .bx-viewport { border-top: none; background-color: black; }
+
+.image-strip-1, .image-strip-2, .image-strip-3, .bxslider li {
+  height: 350px;
+  overflow: hidden;
+  background-size: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.image-strip-1 .text { z-index: 100; position: absolute; top: 150px; left: 50px; color: white; text-align: center; }
+.image-strip-1 .text p { text-shadow: 0 0 15px #000; }
+.image-strip-1 h1 { text-shadow: 1px 1px 2px #ff0000; }
+.image-strip-2 .text { text-align: right; z-index: 100; position: absolute; top: 580px; width: 100%; text-align: center; }
+
+.emphasis-box {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 150;
+  background-color: rgba(0,0,0,.9);
+  width: 90%;
+  height: 95%;
+  margin: auto auto;
+  color: white;
+}
+.emphasis-box .text { margin: 50px 50px; max-height: 80%; overflow: scroll; }
+.emphasis-box p { text-transform: none; font-size: 13px; text-align: justify; line-height: 19px; }
+
+/*phone*/
+@media (min-width:420px){
+  .image-strip-1 .text { text-align: left; }
+  .mobile-only { display: none; }
+}
+
+/*tablet*/
+@media (min-width:750px){
+  .emphasis-box { width: 60%; }
+}
