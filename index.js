@@ -63,7 +63,7 @@ $('.menu-expanded').on('click', 'a', function(){
 });
 
 $('.emphasis-box').on('click', '.menu-close', function(){
-  $(this).parent().parent('.emphasis-box').hide();
+  $(this).parent('.emphasis-box').hide();
 });
 
 
