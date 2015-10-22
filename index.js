@@ -52,7 +52,7 @@ var collapseMenu = function(){
   });
 };
 
-$('.menu-expanded .menu-close').on('click', collapseMenu());
+$('.menu-expanded .menu-close').on('click', collapseMenu);
 
 $('.menu-expanded').on('click', 'a', function(){
   var selected = $(this).attr('id');
