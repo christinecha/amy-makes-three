@@ -12,6 +12,7 @@
 
 	var plugin = {};
 
+
 	var defaults = {
 
 		// GENERAL

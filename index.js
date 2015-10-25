@@ -5,39 +5,70 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  $('.strip-1 .bxslider').bxSlider({
+  var num = 1;
+
+  var slider1 = $('.strip-1 .bxslider').bxSlider({
     randomStart: true,
-    stopAuto: false,
-    autoDirection: 'prev',
-    auto: true,
     controls: false,
+    pause: 4000,
   });
 
-  $('.strip-2 .bxslider').bxSlider({
+  var slider2 = $('.strip-2 .bxslider').bxSlider({
     randomStart: true,
-    stopAuto: false,
-    pause: 6300,
-    auto: true,
     controls: false,
+    pause: 4000,
   });
 
-  $('.strip-3 .bxslider').bxSlider({
+  var slider3 = $('.strip-3 .bxslider').bxSlider({
     randomStart: true,
-    stopAuto: false,
-    autoDirection: 'prev',
-    auto: 5200,
     controls: false,
+    pause: 4000,
   });
+
+  setInterval(function(){
+    if (num < 3){
+      num+= 1;
+    } else {
+      num = 1;
+    }
+
+    if (num == 1) {
+      var current = slider1.getCurrentSlide();
+      var slideQty = slider1.getSlideCount();
+      var randomSlide = Math.round(Math.random() * (slideQty - 1));
+      while (randomSlide == current) {
+        randomSlide = Math.round(Math.random() * (slideQty - 1));
+      };
+      console.log (num, randomSlide);
+      slider1.goToSlide(randomSlide);
+    } else if (num == 2) {
+      var current = slider2.getCurrentSlide();
+      var slideQty = slider2.getSlideCount();
+      var randomSlide = Math.round(Math.random() * (slideQty - 1));
+      while (randomSlide == current) {
+        randomSlide = Math.round(Math.random() * (slideQty - 1));
+      };
+      console.log (num, randomSlide);
+      if ((randomSlide == 1) || (randomSlide == 2) || (randomSlide == 5)){
+        $('.image-strip-2 .text h1').css('color', 'black');
+      } else {
+        $('.image-strip-2 .text h1').css('color', 'white');
+      }
+      slider2.goToSlide(randomSlide);
+    } else if (num == 3) {
+      var current = slider3.getCurrentSlide();
+      var slideQty = slider3.getSlideCount();
+      var randomSlide = Math.round(Math.random() * (slideQty - 1));
+      while (randomSlide == current) {
+        randomSlide = Math.round(Math.random() * (slideQty - 1));
+      };
+      console.log (num, randomSlide);
+      slider3.goToSlide(randomSlide);
+    }
+  }, 3000);
+
 });
 
-// make text flicker
-setInterval(function(){
-  var random1 = Math.random() * 2;
-  var random2 = Math.random() * 2;
-  var random3 = Math.random() * 2;
-  var string = random1 + 'px ' + random2 + 'px ' + random3 + 'px #ff0000';
-  $('.image-strip-1 h1').css('text-shadow', string);
-}, 100);
 
 
 //MENU FUNCTIONS
