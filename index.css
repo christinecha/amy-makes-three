@@ -45,7 +45,7 @@ p { font-family: 'Roboto', sans-serif; font-size: 18px; text-transform: uppercas
 .image-strip-1 p { letter-spacing: -.05em; }
 .image-strip-1 h1 { margin: -5px; padding: 5px; }
 .strikethrough { background-image:url('assets/red-strikethrough.png'); background-repeat: no-repeat; background-position: center; }
-.image-strip-2 .text { text-align: right; z-index: 100; position: absolute; top: 580px; width: 100%; text-align: center; }
+.image-strip-2 .text { color: white; text-shadow: 0 0 5px #000; text-align: right; z-index: 100; position: absolute; top: 580px; width: 100%; text-align: center; }
 
 .emphasis-box {
   display: none;
