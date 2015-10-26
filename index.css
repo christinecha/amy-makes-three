@@ -62,7 +62,8 @@ p { font-family: 'Roboto', sans-serif; font-size: 18px; text-transform: uppercas
 .emphasis-box .text { margin: 50px 50px; max-height: 80%; overflow: scroll; }
 .emphasis-box p { text-transform: none; font-size: 13px; text-align: justify; line-height: 19px; }
 
-.footer { position: absolute; top: 1050px; z-index: 300; height: 30px; color: #888; text-align: center; margin-top: 8px; width: 100%; letter-spacing: .05em; }
+.footer { position: absolute; top: 1030px; z-index: 300; color: white; margin-left: 13px; letter-spacing: .1em; font-size: 9px; opacity: .3; cursor: pointer; }
+.footer:hover { opacity: 1; }
 
 /*phone*/
 @media (min-width:450px){

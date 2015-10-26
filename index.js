@@ -33,42 +33,37 @@ $(document).ready(function(){
     }
 
     if (num == 1) {
-      // var current = slider1.getCurrentSlide();
-      // var slideQty = slider1.getSlideCount();
-      // var randomSlide = Math.round(Math.random() * (slideQty - 1));
-      // while (randomSlide == current) {
-      //   randomSlide = Math.round(Math.random() * (slideQty - 1));
-      // };
-      // console.log (num, randomSlide);
-      // slider1.goToSlide(randomSlide);
-      slider1.goToNextSlide();
+      var current = slider1.getCurrentSlide();
+      var slideOrder = [0,8,1,7,2,6,3,5,4];
+      var index = slideOrder.indexOf(current);
+      if (index < 8) {
+        index+= 1;
+      } else {
+        index = 0;
+      };
+      slider1.goToSlide(slideOrder[index]);
     } else if (num == 2) {
-      // var current = slider2.getCurrentSlide();
-      // var slideQty = slider2.getSlideCount();
-      // var randomSlide = Math.round(Math.random() * (slideQty - 1));
-      // while (randomSlide == current) {
-      //   randomSlide = Math.round(Math.random() * (slideQty - 1));
-      // };
-      // console.log (num, randomSlide);
-      // if ((randomSlide == 1) || (randomSlide == 2) || (randomSlide == 5)){
-      //   $('.image-strip-2 .text h1').css('color', 'black');
-      // } else {
-      //   $('.image-strip-2 .text h1').css('color', 'white');
-      // }
-      // slider2.nex(randomSlide);
-      slider2.goToNextSlide();
+      var current = slider2.getCurrentSlide();
+      var slideOrder = [0,7,1,6,2,5,3,4];
+      var index = slideOrder.indexOf(current);
+      if (index < 7) {
+        index+= 1;
+      } else {
+        index = 0;
+      };
+      slider2.goToSlide(slideOrder[index]);
     } else if (num == 3) {
-      // var current = slider3.getCurrentSlide();
-      // var slideQty = slider3.getSlideCount();
-      // var randomSlide = Math.round(Math.random() * (slideQty - 1));
-      // while (randomSlide == current) {
-      //   randomSlide = Math.round(Math.random() * (slideQty - 1));
-      // };
-      // console.log (num, randomSlide);
-      // slider3.goToSlide(randomSlide);
-      slider3.goToNextSlide();
+      var current = slider3.getCurrentSlide();
+      var slideOrder = [0,1,7,2,6,3,5,4];
+      var index = slideOrder.indexOf(current);
+      if (index < 7) {
+        index+= 1;
+      } else {
+        index = 0;
+      };
+      slider3.goToSlide(slideOrder[index]);
     }
-  }, 3000);
+  }, 2000);
 
 });
 
