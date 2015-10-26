@@ -62,12 +62,14 @@ p { font-family: 'Roboto', sans-serif; font-size: 18px; text-transform: uppercas
 .emphasis-box .text { margin: 50px 50px; max-height: 80%; overflow: scroll; }
 .emphasis-box p { text-transform: none; font-size: 13px; text-align: justify; line-height: 19px; }
 
+.footer { position: absolute; top: 1050px; z-index: 300; height: 30px; color: #888; text-align: center; margin-top: 8px; width: 100%; letter-spacing: .05em; }
+
 /*phone*/
 @media (min-width:450px){
   .image-strip-1 .text { text-align: left; }
   .mobile-only { display: none; }
   .emphasis-box { top: 20px; }
-  .image-strip-1 h1 { font-size: 120px; }
+  .image-strip-1 h1 { font-size: 100px; }
 }
 
 /*tablet*/
