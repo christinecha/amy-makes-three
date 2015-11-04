@@ -44,9 +44,9 @@ $(document).ready(function(){
       slider1.goToSlide(slideOrder[index]);
     } else if (num == 2) {
       var current = slider2.getCurrentSlide();
-      var slideOrder = [0,7,1,6,2,5,3,4];
+      var slideOrder = [0,7,1,6,8,2,5,3,4];
       var index = slideOrder.indexOf(current);
-      if (index < 7) {
+      if (index < 8) {
         index+= 1;
       } else {
         index = 0;
@@ -54,9 +54,9 @@ $(document).ready(function(){
       slider2.goToSlide(slideOrder[index]);
     } else if (num == 3) {
       var current = slider3.getCurrentSlide();
-      var slideOrder = [0,1,7,2,6,3,5,4];
+      var slideOrder = [0,1,7,2,6,3,8,5,4];
       var index = slideOrder.indexOf(current);
-      if (index < 7) {
+      if (index < 8) {
         index+= 1;
       } else {
         index = 0;
